@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-int fact(int n)
+int decitobi(int n)
 {
-    if (n == 0)
-        return 1;
-    return n * fact(n - 1);
+    if(n==0 || n==1)
+    return n;
+    return (decitobi(n/2)*10)+(n%2);
 }
 
 int main()
@@ -17,6 +17,6 @@ int main()
 		printf("INVALID INPUT\n");
 		return 0;
 	}
-	printf("Factorial of %d is %d\n",n,fact(n));
+	printf("binary of %d is %d\n",n,decitobi(n));
 	return 0;
 }
